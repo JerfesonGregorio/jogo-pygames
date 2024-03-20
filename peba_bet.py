@@ -35,13 +35,13 @@ pygame.display.set_caption('PEBA BET!')
 
 def crescer_cobra (arg):
     for XeY in arg:
-        pygame.draw.rect(tela, (0,0,255), (XeY[0], XeY[1], 20, 20))
+        pygame.draw.rect(tela, (0,0,0), (XeY[0], XeY[1], 20, 20))
 
 while True:
     relogio.tick(30) #fps
-    tela.fill((200,200,200))
+    tela.fill((50,50,50))
     mensagem= f'Pontos: {pontos}'
-    texto_formatado = fonte.render(mensagem, True, (0, 0, 0))
+    texto_formatado = fonte.render(mensagem, True, (255, 255, 255))
 
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -78,8 +78,8 @@ while True:
                     x_controle = 0
 
 
-    cobra = pygame.draw.rect(tela, (0,0,255), (x_cobra,y_cobra,20,20))
-    peba = pygame.draw.rect(tela, (200,200,200), (x_peba, y_peba,60,60))
+    cobra = pygame.draw.rect(tela, (0,0,0), (x_cobra,y_cobra,20,20))
+    peba = pygame.draw.rect(tela, (50,50,50), (x_peba, y_peba,60,60))
     lista_cabeca = []
     x_cobra = x_cobra + x_controle
     y_cobra = y_cobra + y_controle
